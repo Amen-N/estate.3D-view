@@ -1,0 +1,4 @@
+-- Required for UUIDs, spatial GIS data, and temporal exclusion constraints
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS postgis;
+CREATE EXTENSION IF NOT EXISTS btree_gist;

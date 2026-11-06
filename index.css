@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0b0f19;
+  color: #f8fafc;
+  min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
+  letter-spacing: -0.015em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-image: 
+    radial-gradient(at 15% 0%, rgba(30, 41, 59, 0.45) 0px, transparent 65%),
+    radial-gradient(at 85% 10%, rgba(51, 65, 85, 0.35) 0px, transparent 60%),
+    radial-gradient(at 50% 90%, rgba(15, 23, 42, 0.5) 0px, transparent 70%);
+}
+
+/* Theme: Imperial Gold */
+html.theme-gold body {
+  background-color: #060813;
+  color: #fef3c7;
+  background-image: 
+    radial-gradient(at 15% 0%, rgba(245, 158, 11, 0.12) 0px, transparent 60%),
+    radial-gradient(at 85% 15%, rgba(217, 119, 6, 0.1) 0px, transparent 65%),
+    radial-gradient(at 50% 90%, rgba(180, 83, 9, 0.08) 0px, transparent 70%);
+}
+html.theme-gold .glass-panel,
+html.theme-gold .glass-card {
+  border-color: rgba(245, 158, 11, 0.22);
+}
+html.theme-gold .text-gradient-gold {
+  background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+html.theme-gold .shimmer-gold-btn {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+  color: #040714 !important;
+  border-color: #fde68a !important;
+  box-shadow: 0 4px 18px -2px rgba(245, 158, 11, 0.35) !important;
+}
+
+/* Theme: Emerald Noir */
+html.theme-emerald body {
+  background-color: #040e0a;
+  color: #ecfdf5;
+  background-image: 
+    radial-gradient(at 15% 0%, rgba(16, 185, 129, 0.12) 0px, transparent 60%),
+    radial-gradient(at 85% 15%, rgba(5, 150, 105, 0.1) 0px, transparent 65%),
+    radial-gradient(at 50% 90%, rgba(4, 120, 87, 0.08) 0px, transparent 70%);
+}
+html.theme-emerald .glass-panel,
+html.theme-emerald .glass-card {
+  border-color: rgba(16, 185, 129, 0.22);
+}
+html.theme-emerald .text-gradient-gold {
+  background: linear-gradient(135deg, #a7f3d0 0%, #34d399 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+html.theme-emerald .shimmer-gold-btn {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%) !important;
+  color: #022c22 !important;
+  border-color: #a7f3d0 !important;
+  box-shadow: 0 4px 18px -2px rgba(16, 185, 129, 0.35) !important;
+}
+
+/* Theme: Nordic Ivory (Light Luxury) */
+html.theme-light {
+  color-scheme: light;
+}
+html.theme-light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  background-image: 
+    radial-gradient(at 15% 0%, rgba(226, 232, 240, 0.8) 0px, transparent 60%),
+    radial-gradient(at 85% 15%, rgba(241, 245, 249, 0.8) 0px, transparent 65%),
+    radial-gradient(at 50% 90%, rgba(226, 232, 240, 0.5) 0px, transparent 70%);
+}
+html.theme-light .glass-panel,
+html.theme-light .glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(203, 213, 225, 0.8);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+html.theme-light .text-gradient-gold {
+  background: linear-gradient(135deg, #0f172a 0%, #334155 50%, #64748b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+html.theme-light .shimmer-gold-btn {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #1e293b !important;
+  box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.25) !important;
+}
+html.theme-light .shimmer-gold-btn:hover {
+  background: #1e293b !important;
+}
+
+/* Custom Architectural Slate Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Typography Utility Classes */
+.font-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-serif-luxury {
+  font-family: 'Cinzel', serif;
+}
+
+.font-mono-tech {
+  font-family: 'Space Grotesk', monospace;
+}
+
+/* Modern Architectural Slate Glassmorphism */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.65), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.55), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.glass-card-interactive {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtle, Elegant Metallic Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 60%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Clean Borders */
+.border-gradient-gold {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Professional Button Styling */
+.shimmer-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.shimmer-gold-btn {
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 600;
+  border: 1px solid #ffffff;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+}
+
+.shimmer-gold-btn:hover {
+  background: #ffffff;
+  box-shadow: 0 8px 24px -4px rgba(255, 255, 255, 0.2), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.shimmer-gold-btn:active {
+  transform: translateY(0);
+}
+
+/* Touch-friendly min target */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* HUD buttons for 360 & 3D viewers */
+.viewer-hud-btn {
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.viewer-hud-btn:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Ambient Subtle Lighting */
+.ambient-glow-gold {
+  box-shadow: 0 0 35px -10px rgba(255, 255, 255, 0.08);
+}
+
+.ambient-glow-sky {
+  box-shadow: 0 0 35px -10px rgba(56, 189, 248, 0.15);
+}
